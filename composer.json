@@ -1,0 +1,36 @@
+{
+  "name": "smeservicesvn/dbal-query-builder-wrapper",
+  "description": "A PHP query builder tool for building SQL queries, compatible with Doctrine DBAL and Symfony.",
+  "type": "library",
+  "keywords": ["query", "mysql", "query builder", "doctrine", "symfony"],
+  "homepage": "https://github.com/smeservicesvn/dbal-query-builder-wrapper",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Can Ngo",
+      "email": "dev@smeservices.vn"
+    }
+  ],
+  "require": {
+    "php": "^8.3",
+    "doctrine/orm": "^3.5",
+    "doctrine/dbal": "^4.3",
+    "doctrine/doctrine-bundle": "^2.15",
+    "facile-it/doctrine-mysql-come-back": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "QueryBuilderBundle\\": "src/QueryBuilderBundle/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12.0"
+  },
+  "support": {
+    "issues": "https://github.com/smeservicesvn/dbal-query-builder-wrapper/issues",
+    "source": "https://github.com/smeservicesvn/dbal-query-builder-wrapper"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
