@@ -14,7 +14,7 @@ A modern PHP query builder tool for building SQL queries, compatible with Doctri
 Install via Composer:
 
 ```bash
-composer require ngocongcan/dbal-query-builder-wrapper
+composer require smeservicesvn/dbal-query-builder-wrapper
 ```
 
 ## Usage Example
