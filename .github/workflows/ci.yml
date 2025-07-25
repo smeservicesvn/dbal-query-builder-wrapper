@@ -31,4 +31,11 @@ jobs:
         run: find src/ tests/ -name '*.php' -exec php -l {} \;
 
       - name: Run PHPUnit tests
-        run: vendor/bin/phpunit --testdox 
+        run: vendor/bin/phpunit --testdox
+
+      - name: Notify Packagist
+        if: github.ref == 'refs/heads/main'
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d "{\"username\":\"${{ secrets.PACKAGIST_USERNAME }}\",\"apiToken\":\"${{ secrets.PACKAGIST_TOKEN }}\"}" \
+          https://packagist.org/api/update-package
